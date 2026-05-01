@@ -12,8 +12,9 @@
     font-family: 'Lato', sans-serif;
     background: #F8F8FC;
     color: #2C2527;
-    width: 210mm;
-    min-height: 297mm;
+    max-width: 210mm;
+    width: 100%;
+    min-height: 100vh;
     margin: 0 auto;
   }
 
@@ -282,12 +283,12 @@
     <div class="ba-pair">
       <div class="ba-row">
         <div class="ba-photo before">
-          <img src="assets/file_00000000bed871f5999e1ecf1e313b1c.png" alt="Before photo">
+          <img src="assets/great-wall-before.jpg" alt="Before photo">
           <span class="ba-label-tag">Before</span>
         </div>
         <div class="ba-arrow">&#8594;</div>
         <div class="ba-photo after">
-          <img src="assets/file_00000000f90071fd85711f95b248e8ad.png" alt="After photo">
+          <img src="assets/great-wall-after.jpg" alt="After photo">
           <span class="ba-label-tag">After</span>
         </div>
       </div>
@@ -298,12 +299,12 @@
     <div class="ba-pair">
       <div class="ba-row">
         <div class="ba-photo before">
-          <img src="assets/file_0000000031d871f79f1190e8f57b2455.png" alt="Before photo">
+          <img src="assets/forbidden-city-before.jpg" alt="Before photo">
           <span class="ba-label-tag">Before</span>
         </div>
         <div class="ba-arrow">&#8594;</div>
         <div class="ba-photo after">
-          <img src="assets/WhatsApp%20Image%202026-05-01%20at%2017.11.21.jpeg" alt="After photo">
+          <img src="assets/forbidden-city-after.jpg" alt="After photo">
           <span class="ba-label-tag">After</span>
         </div>
       </div>
@@ -313,8 +314,8 @@
   </div>
 
   <!-- CIRCLE TO SEARCH SPOTLIGHT -->
-  <div style="background:#EFEFF0; border-radius:12px; padding:20px 22px; margin-bottom:28px; display:flex; gap:20px; align-items:center;">
-    <img src="assets/20260425_120759.jpg" alt="Circle to Search in action at Bell Tower of Beijing"
+  <div id="circle-to-search" style="background:#EFEFF0; border-radius:12px; padding:20px 22px; margin-bottom:28px; display:flex; gap:20px; align-items:center;">
+    <img src="assets/great-wall-circle-search.jpg" alt="Circle to Search in action at Bell Tower of Beijing"
       style="width:90px; border-radius:10px; flex-shrink:0; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
     <div>
       <p style="font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#A08898;margin-bottom:5px;">Google Circle to Search</p>
@@ -473,10 +474,10 @@
 </div><!-- /main -->
 
 <!-- TRAINER INTRODUCTION -->
-<div style="background:#F8F8FC;border-top:2px solid #D5CAD6;padding:20px 44px;">
-  <div style="display:flex;align-items:center;gap:22px;">
+<div id="trainer-intro" style="background:#F8F8FC;border-top:2px solid #D5CAD6;padding:20px 44px;">
+  <div id="trainer-inner" style="display:flex;align-items:center;gap:22px;">
     <a href="https://impactuslearning.com/" target="_blank" style="flex-shrink:0;display:block;">
-      <img src="assets/WhatsApp%20Image%202026-04-24%20at%2012.08.04.jpeg" alt="Dr Andrew Chew"
+      <img src="assets/dr-andrew.jpg" alt="Dr Andrew Chew"
         style="width:70px;height:70px;border-radius:50%;object-fit:cover;border:2px solid #A08898;display:block;">
     </a>
     <div style="flex:1;">
@@ -486,7 +487,7 @@
       <p style="font-size:10.5px;color:#5A5055;line-height:1.6;margin-bottom:0;">DBA (SUSS) &nbsp;&middot;&nbsp; MBA NTU &nbsp;&middot;&nbsp; AI Governance Professional (IAPP) &nbsp;&middot;&nbsp; MIT Sloan AI Strategy<br>
       Lecturer, NTU Nanyang Business School &amp; SUSS &nbsp;&middot;&nbsp; 1,100+ professionals trained</p>
     </div>
-    <div style="text-align:right;flex-shrink:0;">
+    <div id="trainer-contact" style="text-align:right;flex-shrink:0;">
       <style>
         @keyframes arrow-nudge { 0%,100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
         @keyframes impactus-glow {
@@ -517,7 +518,7 @@
 </div>
 
 <!-- SKILLSFUTURE FOOTER BAR -->
-<div style="background:#4A3F42;padding:12px 44px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+<div id="sf-footer" style="background:#4A3F42;padding:12px 44px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
   <div style="display:flex;align-items:center;gap:12px;">
     <p style="font-size:10.5px;color:#BDB3BE;line-height:1.5;margin:0;">Want to go deeper with AI? Dr Andrew also teaches the <strong style="color:#F5E2D8;">AI course at NTUC Learning Hub</strong> — claimable with your SkillsFuture credits.</p>
   </div>
@@ -541,5 +542,50 @@
   </a>
 </div>
 
+
+<!-- MOBILE RESPONSIVE OVERRIDES -->
+<style>
+@media (max-width: 640px) {
+  body { background: #F8F8FC; }
+  .hero { padding: 24px 20px 20px !important; }
+  .hero-title { font-size: 30px !important; }
+  .hero-sub { font-size: 13px !important; max-width: 100% !important; margin-bottom: 14px !important; }
+  .hero-badge { font-size: 10px !important; }
+  .transform-strip { padding: 10px 20px !important; flex-direction: column !important; align-items: flex-start !important; gap: 4px !important; }
+  .strip-dot { display: none !important; }
+  .transform-strip p { font-size: 12px !important; }
+  .main { padding: 22px 20px !important; }
+  .section-label { font-size: 9px !important; }
+  .section-title { font-size: 18px !important; }
+  .ba-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .ba-photo { height: 160px !important; }
+  #circle-to-search { flex-direction: column !important; align-items: flex-start !important; padding: 18px !important; }
+  #circle-to-search img { width: 100% !important; max-width: 220px !important; }
+  .benefits-grid { grid-template-columns: 1fr !important; }
+  .modules-row { grid-template-columns: repeat(2, 1fr) !important; }
+  .skill-grid { grid-template-columns: 1fr !important; }
+  .skill-last { flex-direction: column !important; gap: 6px !important; }
+  .quote-strip { flex-direction: column !important; gap: 8px !important; padding: 14px 16px !important; }
+  .quote-mark { font-size: 38px !important; line-height: 1 !important; }
+  .quote-text { font-size: 12px !important; }
+  #trainer-intro { padding: 20px !important; }
+  #trainer-inner { flex-direction: column !important; align-items: center !important; gap: 14px !important; text-align: center; }
+  #trainer-contact { text-align: center !important; margin-top: 4px; }
+  #trainer-contact .impactus-btn { display: flex !important; justify-content: center; width: 100%; }
+  #sf-footer { padding: 16px 20px !important; flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
+  #sf-footer p { font-size: 10px !important; }
+  .sf-btn { width: 100%; justify-content: center; padding: 11px 20px !important; }
+}
+@media (min-width: 641px) and (max-width: 800px) {
+  .hero { padding: 28px 28px 22px !important; }
+  .main { padding: 26px 28px !important; }
+  .ba-grid { grid-template-columns: 1fr !important; gap: 22px !important; }
+  .benefits-grid { grid-template-columns: 1fr 1fr !important; }
+  .skill-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  #trainer-intro { padding: 20px 28px !important; }
+  #sf-footer { padding: 12px 28px !important; }
+}
+img { max-width: 100%; height: auto; }
+</style>
 </body>
 </html>

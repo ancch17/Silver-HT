@@ -158,6 +158,7 @@
     width: 100%; height: 100%;
     object-fit: cover;
     border-radius: 6px;
+    cursor: zoom-in;
   }
   .ba-label-tag {
     position: absolute;
@@ -316,7 +317,7 @@
   <!-- CIRCLE TO SEARCH SPOTLIGHT -->
   <div id="circle-to-search" style="background:#EFEFF0; border-radius:12px; padding:20px 22px; margin-bottom:28px; display:flex; gap:20px; align-items:center;">
     <img src="assets/great-wall-circle-search.jpg" alt="Circle to Search in action at Bell Tower of Beijing"
-      style="width:90px; border-radius:10px; flex-shrink:0; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+      style="width:90px; border-radius:10px; flex-shrink:0; box-shadow:0 2px 8px rgba(0,0,0,0.15); cursor:zoom-in;">
     <div>
       <p style="font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#A08898;margin-bottom:5px;">Google Circle to Search</p>
       <p style="font-family:'Playfair Display',serif;font-size:16px;color:#2C2527;font-weight:700;margin-bottom:6px;line-height:1.3;">The world explains itself to you — instantly</p>
@@ -587,5 +588,27 @@
 }
 img { max-width: 100%; height: auto; }
 </style>
+
+<!-- LIGHTBOX -->
+<div id="lb-ov" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;" onclick="if(event.target===this||event.target.id==='lb-close')this.style.display='none'">
+  <img id="lb-img" style="max-width:92vw;max-height:92vh;border-radius:10px;box-shadow:0 12px 50px rgba(0,0,0,0.6);pointer-events:none;">
+  <button id="lb-close" style="position:absolute;top:18px;right:22px;background:rgba(255,255,255,0.18);border:none;color:#fff;font-size:24px;width:42px;height:42px;border-radius:50%;cursor:pointer;line-height:1;">&#x2715;</button>
+</div>
+<script>
+(function(){
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('.ba-photo img,#circle-to-search img');
+    if(!t)return;
+    var ov=document.getElementById('lb-ov');
+    document.getElementById('lb-img').src=t.src;
+    document.getElementById('lb-img').alt=t.alt||'';
+    ov.style.display='flex';
+    e.stopPropagation();
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')document.getElementById('lb-ov').style.display='none';
+  });
+})();
+</script>
 </body>
 </html>

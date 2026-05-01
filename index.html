@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Fun on Holidays — Silver Horizon × ImpactusLearning</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Lato',sans-serif;background:#F8F8FC;color:#2C2527}
+a{color:inherit;text-decoration:none}
+.hero{background:linear-gradient(160deg,#6B5E62 0%,#4A3F42 100%);padding:64px 48px;position:relative;overflow:hidden;text-align:center}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;background:#A08898;opacity:.1}
+.hero::after{content:'';position:absolute;bottom:-80px;left:40px;width:240px;height:240px;border-radius:50%;background:#A08898;opacity:.07}
+.hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#F5E2D8;margin-bottom:16px}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,72px);font-weight:700;color:#fff;line-height:1.1;margin-bottom:20px;position:relative;z-index:1}
+.hero-title span{color:#F5E2D8}
+.hero-sub{font-size:clamp(15px,2vw,18px);font-weight:300;color:#E8E0E4;line-height:1.7;max-width:600px;margin:0 auto 28px;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:#A08898;color:#fff;font-size:12px;font-weight:700;letter-spacing:1.5px;padding:8px 22px;border-radius:24px;position:relative;z-index:1}
+.transform-strip{background:#A08898;padding:18px 48px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.transform-strip p{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:#fff}
+.strip-dot{width:6px;height:6px;border-radius:50%;background:#fff;opacity:.4;flex-shrink:0}
+.section{padding:56px 48px;max-width:1100px;margin:0 auto}
+.section-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#A08898;margin-bottom:8px}
+.section-title{font-family:'Playfair Display',serif;font-size:28px;color:#6B5E62;margin-bottom:32px;line-height:1.3}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:48px}
+.ba-pair{display:flex;flex-direction:column;gap:10px}
+.ba-row{display:flex;gap:8px;align-items:stretch}
+.ba-photo{flex:1;height:180px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.ba-photo.before{background:#D8CFC0;border:2px dashed #B0A090}
+.ba-photo.after{background:#F7EDE6;border:2px solid #D5CAD6}
+.ba-photo img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.ba-label-tag{position:absolute;top:9px;left:9px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:10px}
+.before .ba-label-tag{background:#C0B5A5;color:#6B5E62}
+.after .ba-label-tag{background:#6B5E62;color:#fff}
+.photo-placeholder{font-size:12px;color:#8A7D82;text-align:center;padding:10px;line-height:1.6}
+.ba-arrow{display:flex;align-items:center;justify-content:center;color:#A08898;font-size:24px;padding:0 4px;flex-shrink:0}
+.ba-caption{font-size:12px;font-weight:700;color:#6B5E62;text-align:center;letter-spacing:.5px}
+.benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:40px}
+.benefit-card{background:#fff;border:1px solid #E8E0D0;border-radius:12px;padding:24px 20px;border-left:4px solid #D5CAD6}
+.benefit-icon{font-size:28px;margin-bottom:12px;display:block}
+.benefit-title{font-size:14px;font-weight:700;color:#6B5E62;margin-bottom:6px;line-height:1.3}
+.benefit-desc{font-size:12px;color:#5A5055;line-height:1.6}
+.modules-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:20px}
+.module-chip{background:#6B5E62;border-radius:10px;padding:16px 14px;text-align:center}
+.module-chip.gold{background:#F5E2D8}
+.module-num{font-size:9px;font-weight:700;letter-spacing:1.5px;color:#F5E2D8;margin-bottom:6px;text-transform:uppercase}
+.module-chip.gold .module-num{color:#4A3F42}
+.module-name{font-size:11px;font-weight:700;color:#fff;line-height:1.4}
+.module-chip.gold .module-name{color:#4A3F42}
+.module-extra{background:#EFEFF0;border-radius:10px;padding:14px 20px;display:flex;align-items:center;gap:12px;margin-bottom:40px}
+.module-extra-icon{font-size:20px}
+.module-extra-text{font-size:12px;color:#5A5055;line-height:1.5}
+.module-extra-text strong{color:#6B5E62}
+.quote-strip{background:#6B5E62;border-radius:12px;padding:24px 32px;margin-bottom:40px;display:flex;gap:20px;align-items:flex-start}
+.quote-mark{font-family:'Playfair Display',serif;font-size:64px;color:#F7EDE6;line-height:.7;flex-shrink:0}
+.quote-text{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:#F0E6DF;line-height:1.7}
+.quote-attr{font-size:11px;font-weight:700;color:#F5E2D8;margin-top:8px;letter-spacing:.5px}
+.media-section{background:#4A3F42;padding:56px 48px;text-align:center}
+.media-thumb{max-width:600px;margin:0 auto 24px;border-radius:12px;overflow:hidden;border:3px solid #6B5E62;cursor:pointer;position:relative}
+.media-thumb img{width:100%;display:block}
+.play-overlay{position:absolute;inset:0;background:rgba(74,63,66,.45);display:flex;align-items:center;justify-content:center}
+.play-btn{width:72px;height:72px;background:#F5E2D8;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:#4A3F42}
+.media-caption{font-size:13px;color:#D5CAD6;font-style:italic}
+.trainer-section{background:#fff;padding:48px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;border-top:3px solid #A08898}
+.trainer-avatar{width:80px;height:80px;border-radius:50%;background:#6B5E62;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:24px;color:#A08898;font-weight:700;flex-shrink:0;overflow:hidden}
+.trainer-info{flex:1}
+.trainer-name{font-size:16px;font-weight:700;color:#6B5E62;margin-bottom:3px}
+.trainer-title{font-size:11px;color:#8A7D82;line-height:1.6}
+.trainer-creds{font-size:11px;color:#5A5055;margin-top:4px}
+.cta-section{background:#EFEFF0;padding:48px;text-align:center;border-top:1px solid #E4DDD0}
+.cta-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#A08898;margin-bottom:8px}
+.cta-title{font-family:'Playfair Display',serif;font-size:24px;color:#6B5E62;margin-bottom:6px}
+.cta-desc{font-size:13px;color:#6B5E62;line-height:1.6;margin-bottom:24px}
+.sf-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:30px;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#1a0a00;text-decoration:none;background:linear-gradient(135deg,#D4AF37 0%,#F5D87A 40%,#D4AF37 70%,#A07830 100%);box-shadow:0 4px 18px rgba(212,175,55,.4);transition:transform .2s}
+.sf-btn:hover{transform:translateY(-2px)}
+footer{background:#2C2527;padding:24px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer p{font-size:12px;color:#8A7D82}
+footer a{color:#A08898;font-size:12px}
+@media(max-width:700px){.ba-grid{grid-template-columns:1fr}.hero{padding:48px 24px}.section{padding:40px 24px}.trainer-section{padding:32px 24px}.cta-section{padding:32px 24px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <p class="hero-eyebrow">Silver Horizon Travel Co-operative × ImpactusLearning</p>
+  <h1 class="hero-title">AI <span>Fun</span> on<br>Holidays</h1>
+  <p class="hero-sub">A hands-on, one-day experience that transforms how your members travel — richer memories, adventures to remember, and moments worth sharing.</p>
+  <span class="hero-badge">No tech background needed</span>
+</div>
+<div class="transform-strip">
+  <p>Your holiday photos — brought to life</p>
+  <div class="strip-dot"></div>
+  <p>Your trip — relived through song</p>
+  <div class="strip-dot"></div>
+  <p>Your adventures — remembered forever</p>
+</div>
+<div class="section">
+  <p class="section-label">See the difference</p>
+  <h2 class="section-title">Two real examples — Andrew's own China trip</h2>
+  <div class="ba-grid">
+    <div class="ba-pair">
+      <div class="ba-row">
+        <div class="ba-photo before"><span class="ba-label-tag">Before</span><p class="photo-placeholder">Original travel photo<br><small>Taken on the trip</small></p></div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-photo after"><span class="ba-label-tag">After</span><p class="photo-placeholder" style="color:#7A6E72">AI-enhanced &amp; restored<br><small>Vivid, sharp, timeless</small></p></div>
+      </div>
+      <p class="ba-caption">📸 Photo Restoration &amp; Enhancement</p>
+    </div>
+    <div class="ba-pair">
+      <div class="ba-row">
+        <div class="ba-photo before"><span class="ba-label-tag">Your trip</span><p class="photo-placeholder">Describe your journey<br><small>Places, feelings, moments</small></p></div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-photo after"><span class="ba-label-tag">Your song</span><p class="photo-placeholder" style="color:#7A6E72">🎵 AI-composed &amp; sung<br><small>A song just for you</small></p></div>
+      </div>
+      <p class="ba-caption">🎵 AI Music Creation</p>
+    </div>
+  </div>
+  <p class="section-label">Why join us</p>
+  <h2 class="section-title">What you'll walk away with</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card"><span class="benefit-icon">📸</span><p class="benefit-title">Stunning Photo Memories</p><p class="benefit-desc">Restore faded travel photos, enhance colours, and transform ordinary snapshots into gallery-worthy keepsakes using AI tools.</p></div>
+    <div class="benefit-card"><span class="benefit-icon">🎵</span><p class="benefit-title">Your Own Travel Song</p><p class="benefit-desc">Create a personalised song about your holiday — AI composes the melody and lyrics based on your travel story. No musical talent required.</p></div>
+    <div class="benefit-card"><span class="benefit-icon">📖</span><p class="benefit-title">Lifelong Memory Keeper</p><p class="benefit-desc">Learn to build beautiful digital travel diaries and memory books your family will treasure for generations — effortlessly, with AI.</p></div>
+  </div>
+  <p class="section-label">What's inside</p>
+  <h2 class="section-title">Course Modules</h2>
+  <div class="modules-row">
+    <div class="module-chip"><p class="module-num">Module 01</p><p class="module-name">AI Photo Magic</p></div>
+    <div class="module-chip"><p class="module-num">Module 02</p><p class="module-name">Trip Song Creator</p></div>
+    <div class="module-chip gold"><p class="module-num">Module 03</p><p class="module-name">Digital Memory Book</p></div>
+    <div class="module-chip"><p class="module-num">Module 04</p><p class="module-name">Share &amp; Inspire</p></div>
+  </div>
+  <div class="module-extra"><span class="module-extra-icon">💡</span><p class="module-extra-text"><strong>Hands-on throughout:</strong> Every module includes live practice with your own holiday photos and travel stories. No homework — everything is done in the room, together.</p></div>
+  <div class="quote-strip">
+    <div class="quote-mark">“</div>
+    <div>
+      <p class="quote-text">I never imagined AI could be this easy — or this fun. By lunchtime I had a song about my Bali trip that made my grandchildren tear up. This workshop changed how I see travel.</p>
+      <p class="quote-attr">— Silver Horizon Member, AI Fun on Holidays Pilot</p>
+    </div>
+  </div>
+</div>
+<div class="media-section">
+  <p class="section-label" style="color:#D5CAD6">Hear the magic</p>
+  <h2 style="font-family:'Playfair Display',serif;font-size:28px;color:#F5E2D8;margin-bottom:24px">🎵 銀色地平线 · Silver Horizon</h2>
+  <div class="media-thumb">
+    <img src="assets/SilverHorizon_YouTube_Thumbnail.png" alt="Silver Horizon — AI-composed travel song">
+    <div class="play-overlay"><div class="play-btn">▶</div></div>
+  </div>
+  <p class="media-caption">An AI-composed song — created from real travel memories of Silver Horizon members</p>
+</div>
+<div class="trainer-section">
+  <div class="trainer-avatar">AC</div>
+  <div class="trainer-info">
+    <p class="trainer-name">Dr Andrew Chew</p>
+    <p class="trainer-title">Principal Trainer, ImpactusLearning · NTUC LearningHub Approved Trainer<br>AI &amp; Digital Transformation Specialist</p>
+    <p class="trainer-creds">PhD · 20+ years in corporate training · Passionate about making AI accessible to everyone</p>
+  </div>
+  <div style="text-align:right;flex-shrink:0">
+    <p style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#A08898;margin-bottom:4px">One-Day Workshop</p>
+    <p style="font-size:16px;font-weight:700;color:#6B5E62;margin-bottom:2px">AI Fun on Holidays</p>
+    <p style="font-size:12px;color:#6B5E62;line-height:1.5">SkillsFuture Credit eligible<br>Limited seats per cohort</p>
+  </div>
+</div>
+<div class="cta-section">
+  <p class="cta-label">Ready to start?</p>
+  <h2 class="cta-title">Book Your Seat Today</h2>
+  <p class="cta-desc">Use your SkillsFuture Credit — no out-of-pocket cost for eligible Singaporeans.<br>Limited to small cohorts for the best learning experience.</p>
+  <a href="https://lhschedule.ac-eduworks.com/" target="_blank" class="sf-btn">View SkillsFuture Courses →</a>
+</div>
+<footer>
+  <p>© 2026 Silver Horizon Travel Co-operative · <a href="https://impactuslearning.com">ImpactusLearning.com</a></p>
+  <p><a href="mailto:ancch17@gmail.com">Contact Us</a></p>
+</footer>
+</body>
+</html>

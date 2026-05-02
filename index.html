@@ -985,7 +985,7 @@
       </div>
     </div>
 
-    <div class="vid-thumb" data-src="FINAL CHOSEN 🎵 银色地平线 Silver Horizon (1).mp4" style="margin-top:14px;border-radius:10px;overflow:hidden;background:#000;aspect-ratio:16/9;position:relative;cursor:zoom-in;">
+    <div class="vid-thumb" data-src="silver-horizon-song.mp4" style="margin-top:14px;border-radius:10px;overflow:hidden;background:#000;aspect-ratio:16/9;position:relative;cursor:zoom-in;">
       <img src="song-thumbnail.png" alt="Horizons of Silver" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
       <div style="position:absolute;inset:0;background:rgba(0,0,0,0.32);display:flex;align-items:center;justify-content:center;">
         <div style="width:62px;height:62px;border-radius:50%;background:rgba(245,226,216,0.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(0,0,0,0.45);">
@@ -1397,49 +1397,53 @@ document.querySelectorAll('.ripple-btn, .trainer-dark-site').forEach(function(bt
 </div>
 
 <script>
-// IMAGE LIGHTBOX
-(function(){
-  var lbOv  = document.getElementById('lb-ov');
-  var lbImg = document.getElementById('lb-img');
+window.addEventListener('load', function(){
+
+  // ── IMAGE LIGHTBOX ──
+  var lbOv    = document.getElementById('lb-ov');
+  var lbImg   = document.getElementById('lb-img');
   var lbClose = document.getElementById('lb-close');
+
   document.querySelectorAll('.img-zoom').forEach(function(img){
     img.style.cursor = 'zoom-in';
-    img.addEventListener('click', function(){
+    img.addEventListener('click', function(e){
+      e.stopPropagation();
       lbImg.src = img.src;
       lbOv.style.display = 'flex';
     });
   });
-  lbOv.addEventListener('click', function(e){
-    if(e.target !== lbImg){ lbOv.style.display='none'; lbImg.src=''; }
-  });
-  lbClose.addEventListener('click', function(){ lbOv.style.display='none'; lbImg.src=''; });
-})();
 
-// VIDEO LIGHTBOX
-(function(){
-  var vlOv   = document.getElementById('vl-ov');
-  var vlVid  = document.getElementById('vl-vid');
+  lbOv.addEventListener('click', function(e){
+    if(e.target !== lbImg){ lbOv.style.display = 'none'; lbImg.src = ''; }
+  });
+  lbClose.addEventListener('click', function(){ lbOv.style.display = 'none'; lbImg.src = ''; });
+
+  // ── VIDEO LIGHTBOX ──
+  var vlOv    = document.getElementById('vl-ov');
+  var vlVid   = document.getElementById('vl-vid');
   var vlClose = document.getElementById('vl-close');
+
   document.querySelectorAll('.vid-thumb').forEach(function(thumb){
-    thumb.addEventListener('click', function(){
-      var src = thumb.getAttribute('data-src');
-      vlVid.src = src;
+    thumb.addEventListener('click', function(e){
+      e.stopPropagation();
+      vlVid.src = thumb.getAttribute('data-src');
       vlOv.style.display = 'flex';
-      vlVid.play();
+      var p = vlVid.play();
+      if(p && p.catch) p.catch(function(){});
     });
   });
-  vlOv.addEventListener('click', function(e){
-    if(e.target !== vlVid){ vlVid.pause(); vlVid.src=''; vlOv.style.display='none'; }
-  });
-  vlClose.addEventListener('click', function(){ vlVid.pause(); vlVid.src=''; vlOv.style.display='none'; });
-})();
 
-// ESC key closes either lightbox
-document.addEventListener('keydown', function(e){
-  if(e.key === 'Escape'){
-    var lbOv = document.getElementById('lb-ov');
-    var lbImg = document.getElementById('lb-img');
-    var vlOv = document.getElementById('vl-ov');
-    var vlVid = document.getElementById('vl-vid');
-    if(lbOv && lbOv.style.display==='flex'){ lbOv.style.display='none'; lbImg.src=''; }
-    if(vlOv && vlOv.style.display==='flex'){ vlVid.
+  vlOv.addEventListener('click', function(e){
+    if(e.target !== vlVid){ vlVid.pause(); vlVid.src = ''; vlOv.style.display = 'none'; }
+  });
+  vlClose.addEventListener('click', function(){ vlVid.pause(); vlVid.src = ''; vlOv.style.display = 'none'; });
+
+  // ── ESC closes both ──
+  document.addEventListener('keydown', function(e){
+    if(e.key !== 'Escape') return;
+    if(lbOv.style.display === 'flex'){ lbOv.style.display = 'none'; lbImg.src = ''; }
+    if(vlOv.style.display === 'flex'){ vlVid.pause(); vlVid.src = ''; vlOv.style.display = 'none'; }
+  });
+
+});
+</script

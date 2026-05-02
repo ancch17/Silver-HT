@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Fun on Holidays — Silver Horizon</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -465,7 +465,7 @@
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 13px;
-    color: #F1A6DF;
+    color: #F0E6DF;
     line-height: 1.6;
   }
   .quote-attr {
@@ -923,12 +923,12 @@
     <div class="ba-pair">
       <div class="ba-row">
         <div class="ba-photo before">
-          <img src="great-wall-before.jpg" alt="Great Wall — before">
+          <img src="great-wall-before.jpg" alt="Great Wall — before" class="img-zoom">
           <span class="ba-label-tag">Before</span>
         </div>
         <div class="ba-arrow">→</div>
         <div class="ba-photo after">
-          <img src="great-wall-after.png" alt="Great Wall — after">
+          <img src="great-wall-after.png" alt="Great Wall — after" class="img-zoom">
           <span class="ba-label-tag">After</span>
         </div>
       </div>
@@ -940,12 +940,12 @@
     <div class="ba-pair">
       <div class="ba-row">
         <div class="ba-photo before">
-          <img src="forbidden-city-before.jpeg" alt="Forbidden City — before">
+          <img src="forbidden-city-before.jpeg" alt="Forbidden City — before" class="img-zoom">
           <span class="ba-label-tag">Before</span>
         </div>
         <div class="ba-arrow">→</div>
         <div class="ba-photo after">
-          <img src="forbidden-city-after.png" alt="Forbidden City — after">
+          <img src="forbidden-city-after.png" alt="Forbidden City — after" class="img-zoom">
           <span class="ba-label-tag">After</span>
         </div>
       </div>
@@ -958,7 +958,7 @@
 
   <!-- CIRCLE TO SEARCH SPOTLIGHT -->
   <div id="circle-to-search" style="background:#EFEFF0; border-radius:12px; padding:20px 22px; margin-bottom:28px; display:flex; gap:20px; align-items:center;">
-    <img src="great-wall-circle-search.jpeg" alt="Circle to Search at the Bell Tower of Beijing" style="width:100px; border-radius:10px; flex-shrink:0; box-shadow:0 2px 8px rgba(0,0,0,0.15); cursor:zoom-in;">
+    <img src="great-wall-circle-search.jpeg" alt="Circle to Search at the Bell Tower of Beijing" class="img-zoom" style="width:100px; border-radius:10px; flex-shrink:0; box-shadow:0 2px 8px rgba(0,0,0,0.15); cursor:zoom-in;">
     <div>
       <p style="font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#A08898;margin-bottom:5px;">Google Circle to Search</p>
       <p style="font-family:'Playfair Display',serif;font-size:16px;color:#2C2527;font-weight:700;margin-bottom:6px;line-height:1.3;">The world explains itself — instantly</p>
@@ -985,13 +985,15 @@
       </div>
     </div>
 
-    <div style="margin-top:14px;border-radius:10px;overflow:hidden;background:#000;aspect-ratio:16/9;position:relative;">
-      <video id="suno-player" controls preload="metadata" playsinline poster="silver-horizon-thumbnail.png" style="position:absolute;inset:0;width:100%;height:100%;display:block;background:#000;object-fit:contain;">
-        <source src="silver-horizon-song.mp4" type="video/mp4">
-        Your browser does not support embedded video. <a href="silver-horizon-song.mp4" style="color:#F5E2D8;">Download the song</a> instead.
-      </video>
+    <div class="vid-thumb" data-src="FINAL CHOSEN 🎵 银色地平线 Silver Horizon (1).mp4" style="margin-top:14px;border-radius:10px;overflow:hidden;background:#000;aspect-ratio:16/9;position:relative;cursor:zoom-in;">
+      <img src="song-thumbnail.png" alt="Horizons of Silver" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,0.32);display:flex;align-items:center;justify-content:center;">
+        <div style="width:62px;height:62px;border-radius:50%;background:rgba(245,226,216,0.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(0,0,0,0.45);">
+          <div style="width:0;height:0;border-top:13px solid transparent;border-bottom:13px solid transparent;border-left:20px solid #2C2527;margin-left:5px;"></div>
+        </div>
+      </div>
     </div>
-    <p style="font-size:10px;color:#D5CAD6;letter-spacing:0.4px;margin-top:10px;text-align:center;">▶ Press play — stays right here on the page</p>
+    <p style="font-size:10px;color:#D5CAD6;letter-spacing:0.4px;margin-top:10px;text-align:center;">▶ Click to play fullscreen</p>
   </div>
 
   <!-- HOLIDAY REEL — Beijing summary, made by Andrew's wife with CapCut templates -->
@@ -1002,23 +1004,22 @@
           <p style="font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#A08898;margin:0;">And the holiday reel</p>
           <span style="display:inline-flex;align-items:center;gap:6px;background:#F5E2D8;color:#6B5E62;font-size:10px;font-weight:700;letter-spacing:0.5px;padding:4px 11px;border-radius:14px;">🎬 CapCut · template</span>
         </div>
-        <p style="font-family:'Playfair Display',serif;font-size:20px;color:#2C2527;font-weight:700;line-height:1.25;margin-bottom:10px;max-width:380px;">A whole Beijing trip, told in 35 seconds.</p>
-        <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:12.5px;color:#5A5055;line-height:1.65;margin-bottom:10px;max-width:400px;">Andrew's own family trip — the Great Wall, hutong breakfasts, the kids on Tiananmen Square. On the flight home, his wife dropped a handful of phone clips into a CapCut template. Out came this — a polished little keepsake the whole family was watching before the seatbelt sign came off.</p>
+        <p style="font-family:'Playfair Display',serif;font-size:20px;color:#2C2527;font-weight:700;line-height:1.25;margin-bottom:10px;max-width:380px;">Beijing precious memories captured in 35 seconds.</p>
+        <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:12.5px;color:#5A5055;line-height:1.65;margin-bottom:10px;max-width:400px;">The Great Wall, hearty family meals, century old streets — on the last day, my wife dropped a handful of phone clips into a CapCut template. By the time we headed for the airport, we had a keepsake the whole family was watching. Come learn this neat trick.</p>
         <p style="font-size:11.5px;color:#6B5E62;line-height:1.6;margin:0;max-width:400px;"><strong style="color:#4A3F42;">No editing background. No expensive software.</strong> Just a phone, free templates, and the trip itself.</p>
       </div>
 
-      <!-- Vertical Shorts player -->
+      <!-- Beijing reel player -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
-        <div style="position:relative;width:240px;aspect-ratio:9/16;background:#000;border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(74,63,66,0.22),0 0 0 1.5px rgba(160,136,152,0.25);">
-          <iframe
-            src="https://www.youtube.com/embed/cSFCrOxwDNw?rel=0&modestbranding=1&playsinline=1"
-            title="Beijing family trip — 35-second CapCut summary"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block;"></iframe>
+        <div class="vid-thumb" data-src="260502 SMALL Beijin Summary Vid.mp4" style="position:relative;width:240px;aspect-ratio:9/16;background:#000;border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(74,63,66,0.22),0 0 0 1.5px rgba(160,136,152,0.25);cursor:zoom-in;">
+          <img src="Video Andrew Thumbnail.png" alt="Beijing trip reel" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;">
+          <div style="position:absolute;inset:0;background:rgba(0,0,0,0.28);display:flex;align-items:center;justify-content:center;">
+            <div style="width:54px;height:54px;border-radius:50%;background:rgba(245,226,216,0.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.45);">
+              <div style="width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:17px solid #2C2527;margin-left:4px;"></div>
+            </div>
+          </div>
         </div>
-        <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:11px;color:#8A7D82;letter-spacing:0.3px;text-align:center;margin:0;max-width:240px;">Beijing · made on the flight home</p>
+        <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:11px;color:#8A7D82;letter-spacing:0.3px;text-align:center;margin:0;max-width:240px;">Beijing · made on the last day</p>
       </div>
     </div>
   </div>
@@ -1141,77 +1142,304 @@
 </div><!-- /main -->
 
 
-<!-- TRAINER STRIP — compact, photo bigger -->
-<div class="trainer-strip">
-  <a href="https://impactuslearning.com/" target="_blank" class="trainer-photo">
-    <img src="dr-andrew.jpg" alt="Dr Andrew Chew">
-  </a>
-  <div style="flex:1;">
-    <p style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#A08898;margin-bottom:3px;">Your Trainer</p>
-    <div class="trainer-name-row" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:2px;">
-      <p class="trainer-name" style="margin:0;">Dr. Andrew Chew</p>
-      <a href="https://impactuslearning.com/" target="_blank" class="impactus-link">
-        <span>Visit impactuslearning.com</span>
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<!-- TRAINER SECTION — dark, elegant -->
+<style>
+  .trainer-dark {
+    background: linear-gradient(135deg, #1A1516 0%, #2C2527 45%, #4A3F42 100%);
+    padding: 48px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+  .trainer-dark::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: #A08898;
+    opacity: 0.07;
+  }
+  .trainer-dark::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: #F5E2D8;
+    opacity: 0.04;
+  }
+  .trainer-dark-inner {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    position: relative;
+  }
+  .trainer-dark-photo-wrap {
+    flex-shrink: 0;
+    position: relative;
+  }
+  .trainer-dark-photo-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #A08898 0%, #F5E2D8 50%, #A08898 100%);
+    opacity: 0.6;
+  }
+  .trainer-dark-photo-wrap img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    border: 3px solid #1A1516;
+  }
+  .trainer-dark-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: #A08898;
+    margin-bottom: 8px;
+  }
+  .trainer-dark-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.15;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+  .trainer-dark-role {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #D5CAD6;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .trainer-dark-creds {
+    font-size: 10.5px;
+    color: #9D929A;
+    line-height: 1.7;
+    margin-bottom: 22px;
+    letter-spacing: 0.2px;
+  }
+  .trainer-dark-creds strong { color: #C8BCC6; font-weight: 700; }
+  .trainer-dark-divider {
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, #A08898, transparent);
+    margin-bottom: 22px;
+  }
+  .trainer-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+  .ripple-btn {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .ripple-btn:hover { transform: translateY(-2px); }
+  .ripple-btn .ripple-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(212,175,55,0.55);
+    transform: scale(0);
+    pointer-events: none;
+    animation: ripple-out 0.65s ease-out forwards;
+  }
+  @keyframes ripple-out {
+    to { transform: scale(4); opacity: 0; }
+  }
+  .btn-wa {
+    background: #25D366;
+    color: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.25);
+  }
+  .btn-wa:hover { box-shadow: 0 6px 28px rgba(37,211,102,0.38); }
+  .btn-email {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(245,226,216,0.30);
+    color: #F5E2D8;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  }
+  .btn-email:hover { background: rgba(255,255,255,0.14); box-shadow: 0 6px 22px rgba(0,0,0,0.28); }
+  .trainer-dark-site {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #D4AF37;
+    padding: 11px 20px;
+    border-radius: 8px;
+    border: 1.5px solid rgba(212,175,55,0.55);
+    background: rgba(212,175,55,0.07);
+    box-shadow: 0 2px 14px rgba(212,175,55,0.12);
+    transition: background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .trainer-dark-site:hover {
+    background: rgba(212,175,55,0.15);
+    border-color: rgba(212,175,55,0.85);
+    box-shadow: 0 4px 22px rgba(212,175,55,0.28);
+    color: #F5E2D8;
+  }
+  .trainer-dark-site svg { transition: transform 0.2s ease; }
+  .trainer-dark-site:hover svg { transform: translateX(3px); }
+  @media (max-width: 640px) {
+    .trainer-dark { padding: 32px 20px !important; }
+    .trainer-dark-inner { flex-direction: column !important; align-items: center !important; text-align: center; gap: 22px !important; }
+    .trainer-dark-divider { margin-left: auto; margin-right: auto; }
+    .trainer-btns { justify-content: center; }
+    .trainer-dark-name { font-size: 24px !important; }
+    .trainer-dark-site { justify-content: center; }
+  }
+</style>
+
+<div class="trainer-dark">
+  <div class="trainer-dark-inner">
+
+    <!-- Photo with gradient ring -->
+    <div class="trainer-dark-photo-wrap">
+      <img src="dr-andrew.jpg" alt="Dr Andrew Chew">
+    </div>
+
+    <!-- Bio + buttons -->
+    <div style="flex:1;">
+      <p class="trainer-dark-label">Your Trainer</p>
+      <h2 class="trainer-dark-name">Dr. Andrew Chew</h2>
+      <p class="trainer-dark-role">Corporate AI Trainer &amp; Strategist · Impactus Learning Pte. Ltd.</p>
+      <div class="trainer-dark-divider"></div>
+      <p class="trainer-dark-creds">
+        <strong>DBA (SUSS)</strong> · MBA NTU · AI Governance Professional (IAPP) · MIT Sloan AI Strategy<br>
+        Lecturer, NTU Nanyang Business School &amp; SUSS · <strong>1,100+ professionals trained</strong>
+      </p>
+
+      <div class="trainer-btns">
+        <a href="https://wa.me/6593942524?text=Hi%20Andrew%2C%20I%27d%20like%20to%20find%20out%20more%20about%20AI%20Fun%20on%20Holidays%20for%20Silver%20Horizon." target="_blank" class="ripple-btn btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.5l5.797-1.52A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.877 9.877 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374A9.861 9.861 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106S21.894 6.58 21.894 12 17.42 21.894 12 21.894z"></path>
+          </svg>
+          WhatsApp Andrew
+        </a>
+        <a href="mailto:andrew@impactuslearning.com?subject=Silver%20Horizon%20AI%20Fun%20on%20Holidays" class="ripple-btn btn-email">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F5E2D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          andrew@impactuslearning.com
+        </a>
+      </div>
+
+      <a href="https://impactuslearning.com/" target="_blank" class="trainer-dark-site">
+        <span>impactuslearning.com</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12 5 19 12 12 19"></polyline>
         </svg>
       </a>
     </div>
-    <p class="trainer-title">Corporate AI Trainer &amp; Strategist · Impactus Learning Pte. Ltd.</p>
-    <p class="trainer-creds">DBA (SUSS) · MBA NTU · AI Governance Professional (IAPP) · MIT Sloan AI Strategy<br>Lecturer, NTU Nanyang Business School &amp; SUSS · 1,100+ professionals trained</p>
+
   </div>
 </div>
 
-
-<!-- FINAL CTA — 45-min taster -->
-<div class="cta-block">
-  <p class="cta-eyebrow">Before you commit to anything</p>
-  <h2 class="cta-title">Let me run a <span>complimentary 45-minute taster</span> at your next members' gathering.</h2>
-  <p class="cta-body">Your members try one or two tools live — a photo edit, a Circle-to-Search, maybe a Suno song about Silver Horizon itself. <strong>If they don't leave smiling, there's no pitch to make.</strong> No slides, no commitment, no cost. Just members and AI in the same room — and you watching the reaction.</p>
-
-  <div class="cta-row">
-    <a href="https://wa.me/6593942524?text=Hi%20Andrew%2C%20I%27d%20like%20to%20arrange%20the%2045-minute%20Silver%20Horizon%20taster." target="_blank" class="cta-btn-primary">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="#2C2527" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path>
-        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L.057 23.5l5.797-1.52A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.877 9.877 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374A9.861 9.861 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106S21.894 6.58 21.894 12 17.42 21.894 12 21.894z"></path>
-      </svg>
-      WhatsApp Andrew to schedule
-    </a>
-    <a href="mailto:andrew@impactuslearning.com?subject=Silver%20Horizon%20—%2045-min%20taster" class="cta-btn-secondary">
-      ✉ andrew@impactuslearning.com
-    </a>
-  </div>
-
-  <p class="cta-fineprint">Available any weekday or weekend at your usual gathering venue. Members bring only their phones — we bring everything else.</p>
-</div>
-
-
-<!-- LIGHTBOX OVERLAY -->
-<div id="lb-ov" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;">
-  <img id="lb-img" style="max-width:92vw;max-height:92vh;border-radius:10px;box-shadow:0 12px 50px rgba(0,0,0,0.6);pointer-events:none;" src="" alt="Full size">
-  <button id="lb-close" style="position:absolute;top:18px;right:22px;background:rgba(255,255,255,0.15);border:none;border-radius:50%;width:36px;height:36px;font-size:18px;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
-</div>
 <script>
-(function(){
-  var ov = document.getElementById('lb-ov');
-  var img = document.getElementById('lb-img');
-  document.addEventListener('click', function(e){
-    if (e.target === ov || e.target.id === 'lb-close' || e.target.closest && e.target.closest('#lb-close')) {
-      ov.style.display = 'none';
-      return;
-    }
-    var t = e.target.closest && e.target.closest('.ba-photo img, #circle-to-search img');
-    if (!t) return;
-    img.src = t.src;
-    ov.style.display = 'flex';
+document.querySelectorAll('.ripple-btn, .trainer-dark-site').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    var rect = btn.getBoundingClientRect();
+    var size = Math.max(rect.width, rect.height) * 2;
+    var x = e.clientX - rect.left - size/2;
+    var y = e.clientY - rect.top - size/2;
+    var circle = document.createElement('span');
+    circle.className = 'ripple-circle';
+    circle.style.cssText = 'width:'+size+'px;height:'+size+'px;left:'+x+'px;top:'+y+'px;';
+    btn.appendChild(circle);
+    setTimeout(function(){ circle.remove(); }, 700);
   });
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') ov.style.display = 'none';
-  });
-})();
+});
 </script>
 
 
 
-</body></html>
+<!-- IMAGE LIGHTBOX OVERLAY -->
+<div id="lb-ov" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;">
+  <img id="lb-img" style="max-width:92vw;max-height:92vh;border-radius:10px;box-shadow:0 12px 50px rgba(0,0,0,0.6);pointer-events:none;" src="" alt="Full size">
+  <button id="lb-close" style="position:absolute;top:18px;right:22px;background:rgba(255,255,255,0.15);border:none;border-radius:50%;width:40px;height:40px;font-size:20px;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#x2715;</button>
+</div>
+
+<!-- VIDEO LIGHTBOX OVERLAY -->
+<div id="vl-ov" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.94);z-index:10000;align-items:center;justify-content:center;cursor:zoom-out;">
+  <video id="vl-vid" controls playsinline style="max-width:92vw;max-height:92vh;border-radius:10px;box-shadow:0 12px 50px rgba(0,0,0,0.8);cursor:default;"></video>
+  <button id="vl-close" style="position:absolute;top:18px;right:22px;background:rgba(255,255,255,0.15);border:none;border-radius:50%;width:40px;height:40px;font-size:20px;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#x2715;</button>
+</div>
+
+<script>
+// IMAGE LIGHTBOX
+(function(){
+  var lbOv  = document.getElementById('lb-ov');
+  var lbImg = document.getElementById('lb-img');
+  var lbClose = document.getElementById('lb-close');
+  document.querySelectorAll('.img-zoom').forEach(function(img){
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function(){
+      lbImg.src = img.src;
+      lbOv.style.display = 'flex';
+    });
+  });
+  lbOv.addEventListener('click', function(e){
+    if(e.target !== lbImg){ lbOv.style.display='none'; lbImg.src=''; }
+  });
+  lbClose.addEventListener('click', function(){ lbOv.style.display='none'; lbImg.src=''; });
+})();
+
+// VIDEO LIGHTBOX
+(function(){
+  var vlOv   = document.getElementById('vl-ov');
+  var vlVid  = document.getElementById('vl-vid');
+  var vlClose = document.getElementById('vl-close');
+  document.querySelectorAll('.vid-thumb').forEach(function(thumb){
+    thumb.addEventListener('click', function(){
+      var src = thumb.getAttribute('data-src');
+      vlVid.src = src;
+      vlOv.style.display = 'flex';
+      vlVid.play();
+    });
+  });
+  vlOv.addEventListener('click', function(e){
+    if(e.target !== vlVid){ vlVid.pause(); vlVid.src=''; vlOv.style.display='none'; }
+  });
+  vlClose.addEventListener('click', function(){ vlVid.pause(); vlVid.src=''; vlOv.style.display='none'; });
+})();
+
+// ESC key closes either lightbox
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    var lbOv = document.getElementById('lb-ov');
+    var lbImg = document.getElementById('lb-img');
+    var vlOv = document.getElementById('vl-ov');
+    var vlVid = document.getElementById('vl-vid');
+    if(lbOv && lbOv.style.display==='flex'){ lbOv.style.display='none'; lbImg.src=''; }
+    if(vlOv && vlOv.style.display==='flex'){ vlVid.

@@ -1397,8 +1397,7 @@ document.querySelectorAll('.ripple-btn, .trainer-dark-site').forEach(function(bt
 </div>
 
 <script>
-window.addEventListener('load', function(){
-
+(function initLightboxes(){
   // ── IMAGE LIGHTBOX ──
   var lbOv    = document.getElementById('lb-ov');
   var lbImg   = document.getElementById('lb-img');
@@ -1444,6 +1443,7 @@ window.addEventListener('load', function(){
     if(lbOv.style.display === 'flex'){ lbOv.style.display = 'none'; lbImg.src = ''; }
     if(vlOv.style.display === 'flex'){ vlVid.pause(); vlVid.src = ''; vlOv.style.display = 'none'; }
   });
+})();
+</script>
 
-});
-</script
+</body></html
